@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
+    defaultConfig {
+        applicationId "com.example.krot.videoplayermanager"
+        minSdkVersion 22
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //VideoPlayerManager
+    compile 'com.github.danylovolokh:video-player-manager:0.2.0'
+
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //Easy Video Player
+    compile 'com.afollestad:easyvideoplayer:0.3.0'
+
+    //expo player
+    compile 'com.google.android.exoplayer:exoplayer:2.6.1'
+
+    //support design
+    compile 'com.android.support:design:27.0.2'
+
+    //item decoration
+    compile 'com.bignerdranch.android:simple-item-decoration:1.0.0'
+
+    //rxjava
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.8'
+    compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+
+    //round imageview
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+
+
+}
